@@ -1,7 +1,6 @@
 flask
 flask_session
 sqlalchemy
-sqlalchemy.orm
 json
 os
 csv
