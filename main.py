@@ -14,7 +14,7 @@ Session(app)
 
 
 # Set up database
-link = 'postgresql://abid:joker231@localhost/mbs'
+link = "postgres://iaduovpmoevsrt:8225056ab265e9a1818951bbc9ce12c730b1b47adf319afae2b41e7f1360c63d@ec2-54-235-193-0.compute-1.amazonaws.com:5432/de3f75hci6d3hk" 
 engine = create_engine(link)
 db = scoped_session(sessionmaker(bind=engine))
 
