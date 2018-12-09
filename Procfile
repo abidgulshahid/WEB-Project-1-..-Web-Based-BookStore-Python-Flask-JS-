@@ -1,1 +1,1 @@
-flask compile; gunicorn main:app
+web: flask compile; gunicorn main:app
