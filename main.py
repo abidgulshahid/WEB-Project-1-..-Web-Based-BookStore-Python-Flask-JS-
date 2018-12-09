@@ -3,6 +3,7 @@ from flask_session import Session
 from sqlalchemy import create_engine
 import json
 import os
+import requests
 from sqlalchemy.orm import scoped_session, sessionmaker
 # Check for environment variable
 app = Flask(__name__)
