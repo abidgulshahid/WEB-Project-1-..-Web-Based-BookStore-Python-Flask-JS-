@@ -1,4 +1,3 @@
-import requests
 from flask import Flask, session,render_template,request,flash
 from flask_session import Session
 from sqlalchemy import create_engine
