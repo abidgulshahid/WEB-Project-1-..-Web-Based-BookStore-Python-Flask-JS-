@@ -1,1 +1,1 @@
-gunicorn app:marwatbookstore.wsgi
+gunicorn app:main.py
