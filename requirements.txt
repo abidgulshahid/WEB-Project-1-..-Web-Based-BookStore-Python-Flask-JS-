@@ -1,8 +1,3 @@
-backports.shutil-get-terminal-size 1.0.0
-backports.shutil-which             3.5.1
-certifi                            2018.4.16
-chardet                            3.0.4
-click                              6.7
 Django                             2.0.6
 eventlet                           0.23.0
 flask                              1.0.2
@@ -13,9 +8,7 @@ gevent                             1.3.3
 gevent-websocket                   0.10.1
 greenlet                           0.4.13
 idna                               2.6
-itsdangerous                       0.24
 Jinja2                             2.10
-MarkupSafe                         1.0
 pexpect                            4.6.0
 pip                                10.0.1
 psycopg2                           2.7.4
@@ -25,7 +18,6 @@ python-engineio                    2.1.1
 python-socketio                    1.9.0
 pytz                               2018.4
 requests                           2.18.4
-setuptools                         39.0.1
 six                                1.11.0
 SQLAlchemy                         1.2.8
 submit50                           2.4.9
