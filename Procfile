@@ -1,1 +1,1 @@
-web: python main.py
+gunicorn app:marwatbookstore.wsgi
