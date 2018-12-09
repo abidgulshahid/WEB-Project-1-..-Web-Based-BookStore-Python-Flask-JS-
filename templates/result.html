@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marwat Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/main.css" />
+    <style>
+        body {color:white;}
+        textarea {
+            border-radius: 10px;
+            font-size: 18px;
+            outline: none;
+            padding: 8px;
+            resize: none;
+            width: 459px;
+            height: 100px;
+            
+        }
+        a {color:white;  }
+        footer  {
+    position: relative;
+    left: 22em;
+    text-align: center;
+    width: 30%;
+    border-top: white 1px solid;
+    margin-top: 3em;
+}
+footer code {
+    margin-top: 4em;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Marwat Book Store</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Hello {{session["username"]}}</a>
+                </li>
+                <li>
+                    <a href="{{url_for('logout')}}"">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <center>
+            <div style="border:1px solid;width:60%; border-radius: 5px;margin-top: 1.5em">
+
+            <code style="color:yellow">{{review_error}}</code>
+            {% if result_query %}
+            {% for all in result_query %}
+            <h1>Book Name: <cite>{{all.title}}</cite> </h1>
+            <h2>Book Author: <code>{{all.author}}</code></h2>
+            <h3>Book ISBN: <code name="isbn">{{all.isbn}}</code></h3>
+            <h4>Book Year: <cite>{{all.year}}</cite></h4>
+            <h4>Rating: <code style="color:yellow">{{average}}</code> out of 5</h4>
+            <h4>Reviews Recieved: <code style="color:yellow">{{work_ratings_count}}</code></h4>
+        
+            <form action="{{url_for('review',isbn=all.isbn)}}" method="POST">
+                <label>Rating: </label>
+                <select name="rating">
+                    <option value="" disabled selected="">Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select><br><br>
+                <textarea placeholder="Enter Your Review" name="review">
+
+                </textarea>
+                <br>
+                <button>Submit</button>
+            </form>
+            </div>
+            <a href="/api/{{all.isbn}}">API</a>
+
+            {%  endfor %}
+             {% endif %}
+    </center>
+    </section>
+</body>
+<footer>
+        <center>
+    <code>Coded By Abid Khan Marwat</code>    </center>
+    </footer>
+</html>
+
+<!-- Coded By Abid Khan Marwat -->
+
+

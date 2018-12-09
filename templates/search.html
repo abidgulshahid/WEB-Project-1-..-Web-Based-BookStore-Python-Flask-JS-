@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marwat Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/main.css" />
+<style>
+    table {
+        margin-top:2em;
+        border:1px solid ;
+    }
+    table a {
+        color:white;
+        text-decoration: none;
+    }
+    table td,th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+    footer  {
+    position: relative;
+    left: 22em;
+    text-align: center;
+    width: 30%;
+    border-top: white 1px solid;
+    margin-top: 3em;
+}
+footer code {
+    margin-top: 4em;
+}
+  
+</style>
+</head>
+<body>
+    <header>
+        <h2>Marwat Book Store</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Hello {{session["username"]}}</a>
+                </li>
+                <li>
+                    <a href="{{url_for('logout')}}"">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <center>
+            <code style="margin-bottom: 20px;margin-top: 2em;"><b style="color:tomato;">{{results}}</b> Books Founds</code>
+            {% if search_query %}
+            {% for all in search_query %}
+            <!-- <a href="/result/{{all.isbn}}">
+            <h1>Book Name: <cite>{{all.title}}</cite> </h1>
+            <h2>Book Author: <code>{{all.author}}</code></h2>
+            <h3>Book ISBN: <code name="isbn">{{all.isbn}}</code></h3>
+            <h4>Book Year: <cite>{{all.year}}</cite></h4>
+        </a> -->
+        <table>
+            <tr>
+            <th>Book Name</th>
+            <th>Book Author</th>
+            <th>Book ISBN</th>
+            <th>Book Year</th>
+        </tr>
+        <tr>
+            <td><a href="/bookpage/{{all.isbn}}">{{all.title}}</a></td>
+            <td><a href="/bookpage/{{all.isbn}}">{{all.author}}</a></td>
+            <td> <a href="/bookpage/{{all.isbn}}">{{all.isbn}}</a></td>
+            <td><a href="/bookpage/{{all.isbn}}">{{all.year}}</a></td>
+            {%  endfor %}
+            {% endif %}
+
+        </tr>
+        </table>
+            </div>
+           
+    </center>
+    </section>  
+</body>
+<footer>
+        <center>
+    <code>Coded By Abid Khan Marwat</code>    </center>
+    </footer>
+</html>
+
+
+<!-- Coded By Abid Khan Marwat -->
+
+
+

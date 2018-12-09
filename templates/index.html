@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marwat Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/main.css" />
+<style>
+footer  {
+    position: relative;
+    left: 22em;
+    text-align: center;
+    width: 30%;
+    border-top: white 1px solid;
+    margin-top: 3em;
+}
+footer code {
+    margin-top: 4em;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h2>Marwat Book Store</h2>
+        <nav>
+            <ul>
+                <li onclick="show_register()">
+                    <a href="#" onclick="show_register()">Register</a>
+                </li>
+                <li onclick="show_login()">
+                    <a href="#" onclick="show_login()">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <center>
+                <h2  onload="hidequote() id="success"><code>{{success}}</code></h2>
+
+        <form method="POST" name="register_form" id="register_form" action="{{url_for('register')}}" onsubmit="passchk(">
+            <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+            <input type="text" name="username" placeholder="Enter Your Username" maxlength="16" required><br><br>
+            <input type="hidden" name="user_id" />
+            <input type="email" name="email" placeholder="Enter Your Email" required><br><br>
+            <input type="password"  id="pass1" name="password" placeholder="Enter Your Password" minlength="8" required><br>
+            <cite>Password Must Be 8 or Greater than 8</cite>
+            <br>
+            <input type="password" id ="pass2" placeholder="Confirm Your Password" minlength="8" required><br><br>
+            <input type="submit" value="Sign Up" name="submit" /> 
+        </form>
+
+<br>
+
+    <form id="login_form" id="login_form" action="{{url_for('search')}}" method="POST">
+                <input type="text" name="username" placeholder="Enter Your Username" required><br><br>
+                <input type="password" name="password" placeholder="Enter Your Password" required><br><br>
+                <input type="submit" value="Sign In" name="submit" /> 
+
+        </form>
+        <h3 id="quote">“A room without books is like a body without a soul.” <br> <br><code>― Marcus Tullius Cicero
+        </code></h3>
+        
+        <p>{{success}}</p>
+  
+        <p>{{username_error}}</p>
+    </center>
+    </section>
+
+  
+</body>
+</html>
+<script>
+    function passchk(){
+    pass1 = document.querySelector("#pass1").value;
+    pass2 = document.querySelector("#pass2").value;
+    if (pass1 == pass2 )
+    {
+        alert("Password Mateched");
+    }
+    else {
+        alert("Password Not Matched");
+    }
+    }
+    function hidequote(){
+        quote = document.querySelector("#quote").style.display="none";
+
+    }
+        function show_login(){
+        register_form = document.querySelector("#register_form").style.display="none";
+        login_form=document.querySelector("#login_form");
+        login_form.style.display="block";
+        login_form.style.webkitTransition = '400ms all ease-in';
+        hidequote();
+        
+
+      }
+
+      function hide_login()
+      {
+        register_form=document.querySelector("#login_form").style.display="none";
+        login_form=document.querySelector("#login_form");
+
+        login_form.style.webkitTransition = '400ms all ease-in';
+
+
+      }
+      function show_register(){
+        login_form=document.querySelector("#login_form").style.display="none";
+
+        register_form=document.querySelector("#register_form").style.display="block ";
+        hidequote();
+
+      }
+
+      function hide_register()
+      {
+        register_form=document.querySelector("#register_form").style.display="none";
+
+      }
+    
+      var body = document.querySelector("body").onload=function(){
+          hide_register();
+          hide_login();
+      }
+
+
+    </script>
+<footer>
+    <center>
+<code >Coded By Abid Khan Marwat</code>    </center>
+</footer>
+<!-- Coded By Abid Khan Marwat -->

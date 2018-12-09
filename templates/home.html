@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marwat Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/main.css" />
+    <style>
+    footer  {
+    position: relative;
+    left: 22em;
+    text-align: center;
+    width: 30%;
+    border-top: white 1px solid;
+    margin-top: 3em;
+}
+footer code {
+    margin-top: 4em;
+}</style>
+</head>
+<body>
+    <header>
+        <h2>Marwat Book Store</h2>
+        <nav>
+            <ul>
+                <li onclick="show_register()">
+                    <a href="#" onclick="show_register()">Hello {{session['username']}}</a>
+                </li>
+                <li onclick="show_login()">
+                    <a href="{{url_for('logout')}}"">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <center>
+        
+<br>
+        <form id="search_form" method="POST" action="{{url_for('result')}}">
+                <input type="text" name="search" placeholder="Search Here (ISBN,AUTHOR,Title)" required><br>
+              <br>
+                <input type="submit" value="Search Here" name="submit" /> 
+
+        </form>
+        <h3><code>{{search_error}}</code></h3>
+    </center>
+    </section>
+
+  
+</body>
+<footer>
+        <center>
+    <code>Coded By Abid Khan Marwat</code>    </center>
+    </footer>
+</html>
+<script>
+        function show_login(){
+        register_form = document.querySelector("#register_form").style.display="none";
+        login_form=document.querySelector("#login_form");
+        login_form.style.display="block";
+        login_form.style.webkitTransition = '400ms all ease-in';
+        
+
+      }
+
+      function hide_login()
+      {
+        register_form=document.querySelector("#login_form").style.display="none";
+        login_form=document.querySelector("#login_form");
+
+        login_form.style.webkitTransition = '400ms all ease-in';
+
+
+      }
+      function show_register(){
+        login_form=document.querySelector("#login_form").style.display="none";
+
+        register_form=document.querySelector("#register_form").style.display="block ";
+
+      }
+
+      function hide_register()
+      {
+        register_form=document.querySelector("#register_form").style.display="none";
+
+      }
+    
+      var body = document.querySelector("body").onload=function(){
+          hide_register();
+          hide_login();
+      }
+
+
+    </script>
+

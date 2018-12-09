@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    background-color: #1f8bf1;
+    font-size: 20px;
+    color: white;
+}
+
+header  {
+    /* background-color: rgba(0, 0, 0, 0.877); */
+    background-color: #222222;
+    color:white;
+    padding: 1em;
+    height: 4em;
+}
+
+
+input[type=text],input[type=username],input[type=email],input[type=password] {
+    padding:1.5em;
+    border-radius: 2px;
+    border: 1px solid ghostwhite;
+    color:black;
+    width: 30%;
+}
+
+input[type=text]:focus,input[type=username]:focus,input[type=email]:focus,input[type=password]:focus {
+    padding:1.5em;
+    border-radius: 2px;
+    border: 1px white;
+    color:black;
+    width: 30%;
+
+    b
+}
+
+
+
+
+
+input[type=submit] {
+    padding:7px;
+    background-color:#1f8bf1;
+    border-radius: 3px;
+    border:1px solid ghostwhite;
+    width: 30%;
+    transition: 300ms all ease-out;
+    color:white;
+
+
+}
+
+input[type=submit]:hover {
+    padding:7px;
+    background-color: white;
+    border-radius: 3px;
+    border:1px dashed black;
+    width: 30%;
+    color:black;
+    transition: 300ms all ease-in;
+
+}
+
+
+nav ul li {
+    display: inline;
+    padding: 2.2em;
+    
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+}
+nav {
+    text-align: right;
+
+    position: relative;
+    
+    bottom: 2.8em;
+    
+    left: -1em;
+
+
+}
+
+#register_form{
+    padding: 1em;
+}
+
+nav ul li:hover{
+    padding:2.1em;
+    border:1px dashed white;
+    border: #1f8bf1 1px solid;
+}
+
+footer code {
+    border-top: white 1px solid;
+    margin-top: 3em;
+}

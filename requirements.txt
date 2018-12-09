@@ -1,0 +1,8 @@
+flask
+sqlalchemy
+sqlalchemy.orm
+requests
+json
+flask_session
+os
+psycopg2
