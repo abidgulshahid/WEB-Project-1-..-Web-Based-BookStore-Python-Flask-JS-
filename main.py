@@ -1,8 +1,9 @@
-import requests,os
+import requests
 from flask import Flask, session,render_template,request,flash
 from flask_session import Session
 from sqlalchemy import create_engine
 import json
+import os
 from sqlalchemy.orm import scoped_session, sessionmaker
 # Check for environment variable
 app = Flask(__name__)
