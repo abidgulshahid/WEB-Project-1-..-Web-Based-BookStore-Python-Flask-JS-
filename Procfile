@@ -1,2 +1,2 @@
-web: python main.py runserver 127.0.0.1:5000
+web: gunicorn marwatbookstore.wsgi --timeout=1200
 heroku ps:scale web=1
