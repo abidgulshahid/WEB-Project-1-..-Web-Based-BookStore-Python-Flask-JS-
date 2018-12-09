@@ -3,3 +3,4 @@ flask_session
 requests
 sqlalchemy
 psycopg2
+gunicorn
