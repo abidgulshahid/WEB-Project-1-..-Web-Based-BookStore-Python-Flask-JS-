@@ -3,4 +3,7 @@ flask_session
 requests
 sqlalchemy
 psycopg2
+Jinja2
 gunicorn
+Werkzeug
+
